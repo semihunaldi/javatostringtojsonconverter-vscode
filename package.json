@@ -4,6 +4,14 @@
 	"description": "converts toString() output to json",
 	"version": "0.0.1",
 	"publisher": "semihunaldi",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/semihunaldi/javatostringtojsonconverter-vscode.git"
+	},
+	"author": {
+		"name": "Semih Unaldi",
+		"email": "semihunaldi@gmail.com"
+	},
 	"engines": {
 		"vscode": "^1.60.0"
 	},
