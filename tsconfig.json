@@ -16,6 +16,10 @@
 	},
 	"exclude": [
 		"node_modules",
-		".vscode-test"
+		".vscode-test",
+		"./tests/",
+		"./node_modules/",
+		"./dist/"
 	]
+	
 }
