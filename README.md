@@ -1,7 +1,5 @@
 # Java toString to Json converter
 
-This is the README for your extension "Java toString to Json converter". 
-
 It'll help you to convert toString'ed java objects back to json.
 
 ## Features
