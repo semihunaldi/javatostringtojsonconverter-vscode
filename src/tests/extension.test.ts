@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 import { convert } from '../convert';
 
-/*
+
 describe('Options tests', () => { // the tests container
     it('checking default options', () => { // the single test
         
@@ -15,7 +15,7 @@ describe('Options tests', () => { // the tests container
     
     });
 });
-*/
+
 describe('working', () => { // the tests container
     it('checking default options', () => { // the single test
         
