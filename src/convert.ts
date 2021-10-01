@@ -4,8 +4,8 @@ let regexForKeysWithEquals = new RegExp('(?<!\\S)[a-zA-Z0-9_]+=', 'g');
 let regexAllOfTheValuesExceptNulls = new RegExp('(?<=:).*?[a-zA-Z\\d](?=\\n)(?<!null)','g');
 let regexForKeysWithoutQuotes = new RegExp('([\\w]+)(: )', 'g');
 
-export function convert(toStringedText: string): string {
-	
+export function convert(toStringedText: string): [string, boolean, string] {
+
 	let result1;
 	while(result1 = regexForClassNamesWithEquals.exec(toStringedText)) {
 		let sub = toStringedText.substring(result1.index,result1.index + result1[0].length);
@@ -50,9 +50,9 @@ export function convert(toStringedText: string): string {
 	try {
 		pretty = JSON.stringify(JSON.parse(toStringedText),null,2);
 	} catch (error) {
-		return pretty;
+		return [pretty,false,(error as Error).message];
 	}
-	return pretty;
+	return [pretty,true,""];
 }
 
 

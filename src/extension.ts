@@ -28,9 +28,13 @@ export function activate(context: vscode.ExtensionContext) {
 				var toStringedText = document.getText(selection);
 				var jsonPretty = convert(toStringedText);
 				editor.edit(editBuilder => {
-					editBuilder.replace(selection, jsonPretty);
+					editBuilder.replace(selection, jsonPretty[0]);
 				});
-				vscode.window.showInformationMessage('Sucessfully converted to json.');
+				if(!jsonPretty[1]){
+					vscode.window.showInformationMessage(jsonPretty[2]);
+				} else {
+					vscode.window.showInformationMessage('Sucessfully converted to json.');
+				}
 			} catch (error) {
 				vscode.window.showErrorMessage((error as Error).message);
 			}
