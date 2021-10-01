@@ -2,7 +2,7 @@
 	"name": "javatostringtojsonconverter",
 	"displayName": "Java toString to Json converter",
 	"description": "converts toString() output to json",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"publisher": "semihunaldi",
 	"repository": {
 		"type": "git",
